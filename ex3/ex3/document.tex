@@ -1,0 +1,102 @@
+\documentclass[11pt, a4paper]{article}
+
+% font time new roman
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% go tieng viet
+%\usepackage[utf8]{vietnam}
+
+% thu vien toan hoc
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% thu vien mau
+\usepackage{color, xcolor}
+
+% thu vien chi dan
+\usepackage{hyperref}
+
+% list package
+\usepackage{enumerate}
+
+% underline text
+\usepackage{ulem}
+
+% code environment
+\usepackage{listings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% config code environment
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{base_style}{
+%	backgroundcolor=\color{backcolour},		%background color   
+	commentstyle=\color{codegreen},			%comment color
+	keywordstyle=\color{magenta},			%keyword color
+	numberstyle=\tiny\color{codegray},		%number style(mau, font)
+	stringstyle=\color{codepurple},			%string color
+	basicstyle=\ttfamily\footnotesize,		%family, fontsize
+%	breakatwhitespace=false,         		%bo qua khoang trang
+%	breaklines=true,                 		%cho phep break line
+	captionpos=b,                    		%cap
+%	keepspaces=true,                 
+	numbers=left,                    
+%	numbersep=10pt,                  
+%	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=3
+}
+
+%\lstset{style=python_style}
+%\lstlistoflistings
+
+
+\begin{document}
+	\begin{center}
+		{\color{red} \bfseries \Large
+		SoDiTEC\\}
+		Homework Latex 3
+	\end{center}
+	\section{Một số lưu ý}
+	\section{Biểu diễn trên dòng chứa các ký tự khác}
+	Cho \(f: X \rightarrow Y\) là một ánh xạ
+	\begin{enumerate}[1.]
+		\item Ánh xạ f được gọi là đơn ánh nếu
+		\begin{itemize}
+			\item Với mọi \(x_1 \neq x_2\) thì \(f(x_1) \neq f(x_2)\) hoặc
+			\item Nếu \(f(x_1) = f(x_2) \) thì \( x_1 = x_2\)
+		\end{itemize}
+		\item Toàn ánh\\
+		Ánh xạ \(f\) được gọi là toàn ánh nếu \(f(X) = Y\) hay với mỗi \(y \in Y\), tồn tại \(x\in X\) sao cho \(f(x)=y\). Nói cách khác, phương trình \(f(x)=y\) có nghiệm với mọi \(y\in Y\)
+		\item Song ánh\\
+		Ánh xạ được gọi là song ánh nếu nó vừa là đơn ánh, vừa là toàn ánh. Nói cách khác, phương trình \(f(x) = y\) có nghiệm với mọi \(y\in Y\)
+	\end{enumerate}
+	\section{Biểu diễn ở một dòng riêng}
+	\textbf{Ví dụ:} Cho hai ánh xạ
+	\begin{align*}
+		f:\mathbb{R}\backslash 0 &\rightarrow \mathbb{R}\\
+		x &\rightarrow \frac{1}{x}
+	\end{align*}
+	\begin{enumerate}[a)]
+		\item Ánh xạ nào là đơn ánh, toàn ánh. Tìm \(g(\mathbb{R})\)
+		\item xác đinh ánh xạ \(h=g \circ f\)
+	\end{enumerate}
+	\textit{Lời giải:}
+	\begin{enumerate}
+		\item \(f\) là đơn ánh, không phải là toàn ánh, \(g\) không là đơn ánh, cũng không phải là toàn ánh
+		\item \(g(\mathbb{R})=\left[-1,1\right]\)
+	\end{enumerate}
+	\begin{align}
+		f(x) &= 2x^2+3x+6\\
+		f(x_1) + f(x_2) &= 12x_1^2+8x_2^3+2x_1+7x_2+69\\
+		f(x) + \frac{x^2}{x+3} &= \frac{x^3\pi}{x^3+5x^2+5x}\\
+		f(x)&=\frac{x^3}{x^2+3x+6}\\
+		f(A\cup B) &= f(A)\cup f(B), A, B \in X\\
+		f(A\cap B)^{-1} &= f(A)^{-1}\cap f(B)^{-1}, A, B \in Y
+	\end{align}
+\end{document}
